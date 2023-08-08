@@ -1,0 +1,49 @@
+
+body{
+    background-image: url('./images/5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+    
+}
+
+footer{
+    text-align: center;
+    background-color: #023e8a;
+    padding: 0 20px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    color: aliceblue;
+
+
+    
+}
+
+.col-lg-4{
+    color:black;
+    padding: 10% 0;
+   
+}
+h2{
+    
+    text-align: justify;
+    
+}
+
+.col-lg-4{
+    padding: 80px 0;
+    font-size: larger;
+    color: brown;
+    
+}
+.title{
+
+    padding: 50px;
+    text-align: center;
+    color:brown ;
+    font-size: 500px;
+    
+}
