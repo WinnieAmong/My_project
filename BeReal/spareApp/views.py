@@ -7,10 +7,13 @@ from django.contrib.auth.decorators import login_required
 
 from .models import *
 
-from .forms import AddForm,SaleForm
+from .forms import *
 from .filters import *
 def index(request):
     return render(request,'spare/index.html')
+
+def about(request):
+    return render(request,'spare/about.html')
 
 def home(request):
     Products = Product.objects.all().order_by('-id')
@@ -51,7 +54,7 @@ def issue_item(request,pk):
    if request.method == 'POST' :
       if sales_form. is_valid():
          new_sale = sales_form.save(commit=False)
-         new_sale.item = issued_item
+         new_sale.part_purchased = issued_item
          new_sale.unit_price = issued_item.unit_price
          new_sale.save()
          
@@ -60,7 +63,7 @@ def issue_item(request,pk):
          issued_item.total_quantity -= issued_quantity
          issued_item.save()
 
-         print(issued_item.item_name)
+         print(issued_item.part_name)
          print(request.POST['quantity'])
          print(issued_item.total_quantity)
 
@@ -85,6 +88,10 @@ def add_to_stock(request,pk):
     return render(request,'spare/add_to_stock.html',{'form':form})
 
 
-
+def delete_product(request,product_id):
+   delete_product = Product.objects.get(id=product_id)
+   delete_product.delete()
+   return HttpResponseRedirect(reverse('home'))
+   
 
 # Create your views here.

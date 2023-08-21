@@ -26,19 +26,27 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>{{receipt.item| title}}</td>
+                  <td>{{receipt.part_purchased| title}}</td>
                   <td class="text-xs-center">{{receipt.quantity }}</td>
                   <td class="text-xs-center">Ug{{receipt.get_total | title}}</td>
                   <td class="text-xs-right">Ugx{{ receipt.amount_received }}</td>
                   <td class="text-xs-right">Ugx{{ receipt.get_change }}</td>
                 </tr>
               </tbody>
+             
             </table>
           </div>
         </div>
+        manager's sign                 
+        ****** **********<br>   
+        ---------------------<br>
+        Date<br>
+        -------------------
       </div>
     </div>
   </div>
+  
+
 </div>
 
 {% endblock %}

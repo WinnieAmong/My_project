@@ -3,22 +3,22 @@
 <br></br>
 
 <div class = "container">
-  <h1 class= "text-center">ITEMS IN STOCK</h1>
+  <h1 class= "text-center" style="font-weight: bolder;">ITEMS IN STOCK</h1>
   <br>
 
   <div class = "container">
-    <form action = "" method = "GET">
+    <form action = "" id="Search" method = "GET" style="padding-left:300px; font-weight: bolder;" >
       {{product_filters.form}}
       <input 
       type = "submit"
-      value = "Search Products"
+      value = "Search Products" style="background-color: #191970;"
       class="btn btn-secondary btn"/>
     </form>
   </div>
 
   <br>
   <table class="table">
-    <thead class="thead-dark">
+    <thead class="thead-dark"> 
       <tr>
         <th scope="col">Category</th>
         <th scope="col">Item Name</th>
@@ -27,31 +27,30 @@
         <th scope = "col">Detail</th>
       </tr>
     </thead>
-    {% for product in products%}
+    {% for product in products %}
     <tbody>
       <tr>    
-        <td>{{product.Category_name}}</td>
-        <td>{{product.item_name}}</td>
-        <td>{{product.total_quantity}}</td>
-        <td>UGX{{product.unit_price}}</td>
+        <td style="font-weight: bolder;">{{product.Category_name}}</td>
+        <td style="font-weight: bolder;">{{product.part_name}}</td>
+        <td style="font-weight: bolder;">{{product.total_quantity}}</td>
+        <td style="font-weight: bolder;">UGX{{product.unit_price}}</td>
         <!-- Below href we are handling the buy item button and its handled by product_detail -->
         <td><a href="{% url 'product_detail' product.id %}"
               ><input
                 type="submit"
                 value="BUY ITEM"
                 class="btn btn-primary btn"
-                type="button"
+                type="button" style="background-color: #191970;"
             /></a></td>
-
-
-       
-
-
-
-
       </tr>
     </tbody>
     {% endfor %}
   </table>
 </div>
+<footer>
+  <p>copyright: &copy; Winnie Among</p>
+  <P>contact: 0774047103</P>
+  <!-- <i class="fa fa-copyright"></i>
+  Winnie<br> -->
+</footer>
 {% endblock %}

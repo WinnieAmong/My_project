@@ -7,6 +7,8 @@ from spareApp import views
 urlpatterns=[
     path ('',views.index,name='index'),
     path('home/',views.home,name='home'),
+    path('about/',views.about,name='about'),
+
     
 
 
@@ -20,6 +22,7 @@ urlpatterns=[
     path('issue_item/<str:pk>',views.issue_item,name='issue_item'),
     #to add stock
     path('add_to_stock/<str:pk>',views.add_to_stock, name= 'add_to_stock'),
+    path('delete/<int:product_id>',views.delete_product,name='delete_product'),
     
     #path to login
     path('login/',auth_views.LoginView.as_view (template_name='spare/login.html'),name='login'),

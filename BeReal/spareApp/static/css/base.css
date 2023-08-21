@@ -1,47 +1,47 @@
-html,body {
-    position: relative;
-    overflow-x: hidden;
-    background:  url('./images/5.jpg');
-    width: 100% !important;
-    height: 100vh;
-    display: table;
-    position: relative;
-    background-position: center;
-    background-attachment: scroll;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-  
+
 body{
-      background-color: hsl(0, 0%, 98%);
+      background-color: hsl(0, 3%, 75%);
       font-family: 'raleway';
  }
     
 
-form {
+#form {
     width: 40%;
     margin: 0 auto;
+    border: 5px solid rgb(15, 15, 175);
+    border-radius: 50px;
+    height: 810px;
+    width: 500px;
+    padding: 20px;
+    background-color: #e9ecef;;
+   
 }
 
 .navbar {
-    background-color: violet;
+    background-color:#191970;
         
 }
 
-.navbar li a {
-    font-size: 20px;
+table{
+    width: 100%;
 }
-
-.navbar-brand {
-    font-size: 10px !important;
+#search{
+   padding: 40px;
 }
-
-@media(max-width: 767px){
-    form { 
-        width: 90%;
-    }
+#thead-dark{
+    background-color: #191970;
 }
+footer{
+    text-align: center;
+    background-color: rgb(8, 8, 76) ;
+    padding: 0 20px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    color: aliceblue;
 
+}
+.card-tittle{
+    
+}

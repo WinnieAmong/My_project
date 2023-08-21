@@ -19,7 +19,8 @@ class Product(models.Model):
     received_quantity = models.IntegerField(default=0, null=False,blank=False)
     unit_price =models.IntegerField(default=0, null=False,blank=False) 
     arrival_date =models.DateField(default=timezone.now)
-    branch_name = models.CharField(max_length=100, null=False,blank=False)
+    branch_name =models.CharField(max_length=100, null=False,blank=False)
+    # part_number = models.IntegerField(default=0,null=True,blank=True)
     def __str__(self):
         return self.part_name 
     
@@ -30,7 +31,7 @@ class Sale(models.Model):
     amount_received = models.IntegerField(default=0,null=False,blank=False)
     buyer_names = models.CharField(max_length=100,null=False,blank=False)
     unit_price = models.IntegerField(default=0,null=False,blank=False)
-    branch_name = models.CharField(max_length=100, null=False,blank=False)
+    branch = models.CharField(max_length=100, null=False,blank=False)
     buyer_contact = models.IntegerField(default=0,null=False,blank=False)
     date_of_purchase = models.DateField(default=timezone.now)
     

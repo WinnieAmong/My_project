@@ -5,12 +5,13 @@
 <br/>
 
 <div class="container">
-  <form method="POST" action = "">
+  <p>Be Real motor and spareparts company</p>
+  <form method="POST" action = "" id="form">
     <h1 class = "text-center
-    ">ADD TO STOCK FORM</h1><br>
+    " style="font-weight: bolder;">STOCK ADDED</h1><br>
     {% csrf_token %} 
     {{form | crispy}}
-    <input type = "submit" class="btn btn-secondary btn"type="button">
+    <input type = "submit" class="btn btn-danger btn"type="button">
   </form>
 </div>
 {% endblock %}

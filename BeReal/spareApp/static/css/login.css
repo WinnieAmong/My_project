@@ -5,7 +5,7 @@
     border-radius: 25px;
     height: 350px;
     width: 600px;
-    margin-left: 350px;
+    margin-left: 400px;
     padding: 40px 100px;
     background-color: rgb(202, 215, 226);
     
@@ -20,6 +20,6 @@ h6{
     color: rgb(103, 103, 168);
 }
 body{
-    background-color: rgb(165, 163, 161);
+    background-color: white;
     
 }

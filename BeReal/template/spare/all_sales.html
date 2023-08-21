@@ -3,9 +3,9 @@
 <br></br>
 
 <div class = "container">
-<h1 class = "text-center">TOTAL SALES MADE</h1><br>
+<h1 class = "text-center" style="font-weight: bolder;">TOTAL SALES MADE</h1><br>
   <table class="table">
-    <thead class="thead-dark">
+    <thead class="thead-dark" style="font-weight: bolder;">
       <tr>
         <th scope="col">Total Amount Received</th>
         <th scope="col">Total Change Given</th>
@@ -14,9 +14,9 @@
     </thead>  
     <tbody>
       <tr>    
-        <td>UGX{{total}}</td>
-        <td>UGX{{change}}</td>
-        <td>UGX{{net}}</td>
+        <td style="font-weight: bolder;">UGX{{total}}</td>
+        <td style="font-weight: bolder;">UGX{{change}}</td>
+        <td style="font-weight: bolder;">UGX{{net}}</td>
       </tr>
     </tbody>
   </table>
@@ -24,11 +24,11 @@
 <br></br>
 
 <div class = "container">
-  <table class="table">
+  <table class="table" style="background-color:#dfe7fd;">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Customer name</th>
-        <th scope="col">Item Bought</th>
+        <th scope="col"> Item Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Unit Price(UGX)</th>
         <th scope="col">Total Cost</th>
@@ -39,18 +39,27 @@
     {% for sale in sales %}
     <tbody>
       <tr>    
-        <td>{{sale.buyer_names | title}}</td>
-        <td>{{sale.item | title}}</td>
-        <td>{{sale.quantity}}</td>
-        <td>UGX{{sale.unit_price}}</td>
-        <td>UGX{{sale.get_total}}</td>
-        <td>UGX{{sale.amount_received}}</td>
-        <td>UGX{{sale.get_change}}</td>
+        <td style="font-weight: bolder;">{{sale.buyer_names | title}}</td>
+        <td style="font-weight: bolder;">{{sale.part_purchased | title}}</td>
+        <td style="font-weight: bolder;">{{sale.quantity}}</td>
+        <td style="font-weight: bolder;">UGX{{sale.unit_price}}</td>
+        <td style="font-weight: bolder;">UGX{{sale.get_total}}</td>
+        <td style="font-weight: bolder;">UGX{{sale.amount_received}}</td>
+        <td style="font-weight: bolder;">UGX{{sale.get_change}}</td>
       </tr>
     </tbody>
     {% endfor %}
   </table>
 </div>
+
 {% endblock %}
+<footer>
+  <p>copyright: &copy; Winnie Among</p>
+  <P>contact us 0774047103</P>
+  <!-- <i class="fa fa-copyright"></i>
+  Winnie<br> -->
+</footer>
+
+
 
  
