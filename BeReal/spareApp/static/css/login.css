@@ -1,11 +1,11 @@
 
 #form{
     color: rgb(46, 39, 246);
-    border: 2px solid gold;
+    border: 2px solid rgb(8, 8, 76);
     border-radius: 25px;
-    height: 350px;
+    height: 380px;
     width: 600px;
-    margin-left: 400px;
+    margin-left: 500px;
     padding: 40px 100px;
     background-color: rgb(202, 215, 226);
     
@@ -13,7 +13,7 @@
 
 h2{
     color:rgb(113, 113, 193);
-    padding: 40px 50px;
+    padding: 40px 200px;
     margin-left:340px;
 }
 h6{

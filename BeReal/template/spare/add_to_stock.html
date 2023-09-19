@@ -2,16 +2,18 @@
 {% load crispy_forms_tags%} 
 {% load static %}
 {% block content%}
-<br/>
+<br/><br><br>
 
 <div class="container">
-  <p>Be Real motor and spareparts company</p>
-  <form method="POST" action = "" id="form">
+  
+  <form method="POST" action = ""><br>
     <h1 class = "text-center
     " style="font-weight: bolder;">STOCK ADDED</h1><br>
+    <div id="stock">
     {% csrf_token %} 
     {{form | crispy}}
-    <input type = "submit" class="btn btn-danger btn"type="button">
+    <input type = "submit" class="btn btn-primary btn"type="button">
+  </div> 
   </form>
 </div>
 {% endblock %}

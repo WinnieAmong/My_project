@@ -1,8 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +9,18 @@
   <title>Be Real Motors spare Company</title>
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <!-- Raleway font -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
   <!-- Montserrat font -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(8, 8, 76);">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(8, 8, 76); z-index: 1;">
     <a class="nav-link" href="">
-      <img src="{% static 'css/images/7.jpg' %}" alt="logo" width="40" height="30" style="border-radius: 20px;"
+      <img src="{% static 'css/images/logo6.jpg.png' %}" alt="logo" width="90" height="65" style="border-radius: 20px;"
         class="d-inline-block align-text-top">
-      <h1 class="navbar-brand">BeRealMotors Spareparts company</h1>
     </a>
+    <h1 class="navbar-brand" style="margin-top: 10px;">BeRealMotors Spareparts Company</h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,12 +49,7 @@
     </div>
   </nav>
   {% block content%}
-  <footer>
-    <p>copyright: &copy; Winnie Among</p>
-    <P>contact: 0774047103</P>
-    <!-- <i class="fa fa-copyright"></i>
-    Winnie<br> -->
-  </footer>
+ 
   {% endblock%}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -67,6 +60,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+    <footer>
+      <p>copyright: &copy; Winnie Among</p>
+      <P>contact: 0774047103</P>
+      <!-- <i class="fa fa-copyright"></i>
+      Winnie<br> -->
+    </footer>
 </body>
 
 </html>

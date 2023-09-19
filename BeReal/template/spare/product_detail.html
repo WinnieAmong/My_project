@@ -3,8 +3,8 @@
 <br></br>
 
 <div class = "container">
-    <a href="{% url 'issue_item' product.id %}"><input type="submit" value="Buy Item" class="btn btn-secondary" btn type="button"/></a>
-    <a href="{% url 'add_to_stock' product.id %}"><input type= "submit" value="Add to Stock" class="btn btn-secondary btn" type="button"/></a>
+    <a href="{% url 'issue_item' product.id %}"> <br><br><input type="submit" value="Buy Item" class="btn btn-primary" btn type="button"/></a>
+    <a href="{% url 'add_to_stock' product.id %}"><input type= "submit" value="Add to Stock" class="btn btn-primary btn" type="button"/></a>
 </div>
 
 <br></br>
@@ -20,10 +20,10 @@
     </thead>
     <tbody>
       <tr>    
-        <td>{{product.Category_name}}</td>
-        <td>{{product.part_name}}</td>
-        <td>{{product.total_quantity}}</td>
-        <td>UGX{{product.unit_price}}</td>   
+        <td style="font-weight: bolder;">{{product.Category_name}}</td>
+        <td style="font-weight: bolder;">{{product.part_name}}</td>
+        <td style="font-weight: bolder;">{{product.total_quantity}}</td>
+        <td style="font-weight: bolder;">UGX{{product.unit_price}}</td>   
       </tr>
     </tbody>  
   </table>

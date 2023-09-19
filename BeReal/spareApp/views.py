@@ -4,6 +4,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
 
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from .models import *
 
@@ -12,12 +13,27 @@ from .filters import *
 def index(request):
     return render(request,'spare/index.html')
 
-def about(request):
-    return render(request,'spare/about.html')
+def category(request):
+    category=Category.objects.filter()
+    context ={'category':category}
+    return render(request,'spare/category.html',context)
+
+def categoryFilter(request,categ):
+   if (Category.objects.filter(category=categ)):
+      Category_name=Category.objects.filter(category=categ).first()
+      products= Product.objects.filter(category )
+      context = {'products':products,'Category_name':Category_name}
+      return render(request,'spare/products.html',context)
+   else:
+      messages.warning={request,'No such category'}
+      return redirect('spare/category.html')
+
+
 
 def home(request):
     Products = Product.objects.all().order_by('-id')
     Product_filters = ProductFilter(request.GET,queryset = Products)
+    #query set
     Products = Product_filters.qs
     return render(request,'spare/home.html',{'products':Products,'product_filters':Product_filters})
 
@@ -80,6 +96,7 @@ def add_to_stock(request,pk):
       if form.is_valid():
          added_quantity = int(request.POST['received_quantity'])
          issued_item.total_quantity += added_quantity
+         issued_item.part_number = '1'
          issued_item.save()
          #To add to the remaining stock quantity is reduced
          print (added_quantity)

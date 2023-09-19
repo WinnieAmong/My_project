@@ -1,10 +1,10 @@
 {% extends 'spare/base.html' %}
 {% block content%}
-<br></br>
+<br></br><br><br>
 
 <div class = "container">
 <h1 class = "text-center" style="font-weight: bolder;">TOTAL SALES MADE</h1><br>
-  <table class="table">
+  <table class="table" style="border: black;">
     <thead class="thead-dark" style="font-weight: bolder;">
       <tr>
         <th scope="col">Total Amount Received</th>
@@ -28,18 +28,18 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Customer name</th>
-        <th scope="col"> Item Name</th>
+        <th scope="col">Item Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Unit Price(UGX)</th>
         <th scope="col">Total Cost</th>
         <th scope="col">Amount Paid</th>
-        <th scope="col">Change Collected</th>
+        <th scope="col">Balance Payable</th>
       </tr>
     </thead>
     {% for sale in sales %}
     <tbody>
       <tr>    
-        <td style="font-weight: bolder;">{{sale.buyer_names | title}}</td>
+        <td style="font-weight: bolder;font-size: 16px;">{{sale.buyer_names | title}}</td>
         <td style="font-weight: bolder;">{{sale.part_purchased | title}}</td>
         <td style="font-weight: bolder;">{{sale.quantity}}</td>
         <td style="font-weight: bolder;">UGX{{sale.unit_price}}</td>
@@ -51,14 +51,12 @@
     {% endfor %}
   </table>
 </div>
+<br>
+<br>
+<br>
+<br>
 
 {% endblock %}
-<footer>
-  <p>copyright: &copy; Winnie Among</p>
-  <P>contact us 0774047103</P>
-  <!-- <i class="fa fa-copyright"></i>
-  Winnie<br> -->
-</footer>
 
 
 

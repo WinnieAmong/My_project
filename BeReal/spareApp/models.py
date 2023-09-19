@@ -4,7 +4,7 @@ from django.utils import timezone
 
 #defining category of engine
 class Category(models.Model):
-    name = models.CharField(max_length = 50, null = False, blank = False,unique=True)
+    name = models.CharField(max_length = 50, null = False, blank = False, unique=True)
     def __str__(self):
         return self.name
 #defining category for product
@@ -20,7 +20,7 @@ class Product(models.Model):
     unit_price =models.IntegerField(default=0, null=False,blank=False) 
     arrival_date =models.DateField(default=timezone.now)
     branch_name =models.CharField(max_length=100, null=False,blank=False)
-    # part_number = models.IntegerField(default=0,null=True,blank=True)
+    part_number = models.IntegerField(default=0,null=True,blank=True)
     def __str__(self):
         return self.part_name 
     

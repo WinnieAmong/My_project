@@ -2,6 +2,7 @@
 body{
       background-color: hsl(0, 3%, 75%);
       font-family: 'raleway';
+      overflow-x:hidden ;
  }
     
 
@@ -14,11 +15,16 @@ body{
     width: 500px;
     padding: 20px;
     background-color: #e9ecef;;
+    padding-top: 50px;
    
 }
 
 .navbar {
     background-color:#191970;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+   
         
 }
 
@@ -35,13 +41,25 @@ footer{
     text-align: center;
     background-color: rgb(8, 8, 76) ;
     padding: 0 20px;
-    bottom: 0;
+    bottom: 0; 
     left: 0;
-    position: fixed;
+    height: 67px;
     width: 100%;
     color: aliceblue;
+    margin-bottom: 1px;
+    position: fixed;
 
 }
-.card-tittle{
-    
+#stock{
+    width: 40%;
+    margin: 0 auto;
+    border: 5px solid rgb(15, 15, 175);
+    border-radius: 50px;
+    height: 300px;
+    width: 500px;
+    padding: 20px;
+    background-color: #e9ecef;;
+}
+.table-hover{
+  
 }

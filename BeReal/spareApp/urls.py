@@ -7,10 +7,8 @@ from spareApp import views
 urlpatterns=[
     path ('',views.index,name='index'),
     path('home/',views.home,name='home'),
-    path('about/',views.about,name='about'),
-
-    
-
+    path('category/',views.category,name='category'),
+    path('category/<int:product_id>',views.categoryFilter,name='category'),
 
     path('home/<int:product_id>',views.product_detail,name='product_detail'),
 

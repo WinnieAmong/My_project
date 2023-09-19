@@ -1,0 +1,65 @@
+{% extends 'spare/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+
+<div class="container text-center">
+  <div class="row">
+    <!-- <div class="col"> -->
+      <!-- <div class="card">
+        <img src="{% static 'css/images/enginepart.jpg' %}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Engine</h5>
+          <p class="card-text">Engine section content</p>
+          <a href="#" class="btn btn-primary">Choose</a>
+
+        </div>
+      </div>
+    </div>
+    <br>
+    <br> -->
+
+    <div class="col-md-12">
+      <div class="row">
+        {% for item in category %}
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="category-image">
+                <img src="{% static 'css/images' %}">
+              </div>
+              <h1 class="text-center">{{item.name}}</h1>
+              <a href="#">view more</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+   
+    <!-- <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'css/images/bat.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Car Batteries</h5>
+          <p class="card-text">Car Batteries section content.</p>
+          <a href="#" class="btn btn-primary">Choose</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'css/images/6.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Used Tires</h5>
+          <p class="card-text">Tire section content</p>
+          <a href="#" class="btn btn-primary">Choose</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+{% endblock %}

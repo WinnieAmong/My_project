@@ -1,14 +1,45 @@
 {% extends 'spare/base.html'%}
+{% load static %}
 {% block content%}
-<br />
+<br /><br><br><br>
 
 <div class="container">
+  <div class="card" style="font-weight: bolder; z-index: 0;">
+    <div class="card-body">
+      <img src="{% static 'css/images/logo6.jpg.png' %}" alt="logo" width="90" height="65"
+        style="border-radius: 20px; margin-left: 900px;" class="d-inline-block align-text-top">
+      <h3 style="text-align: center; font-weight: bolder;">Be Real Motors and spareparts company</h3>
+      <h3 class="card-title" style="font-size: 20px; font-weight: bold;">Customer : {{receipt.buyer_names | title}}</h3>
+      <h6 class="card-text" style="font-size: 20px;">Item : {{receipt.part_purchased}}</h6>
+      <h6 class="card-text" style="font-size: 20px;">Receipt_No: CW-{{receipt.quantity }}</h6>
+      <h6 class="card-text" style="font-size: 20px;">Amount Paid: UGX{{ receipt.amount_received }}</h6>
+      <h6 class="card-text" style="font-size: 20px;">Quantity: {{receipt.quantity }}</h6>
+      <h2 style="font-size: 20px;">Total Price : UGX{{ receipt.get_total }}</h2>
+      <div style="flex: 1">
+        <h6 class="card-text" style="font-size: 20px;">Change Collected: UGX{{ receipt.get_change }}</h6><br>
+        <p style="font-weight: bolder;font-size: 20px;">********************</p>
+        <p style="font-weight: bold;font-size: 20px;">********************</p>
+        <p style="padding-left: 900px;">manager's sign</p>
+        <p style="padding-left: 900px;">---------------------</p>
+        <h6 style="padding-left: 900px;">Date:{{receipt.date_of_purchase}}</h6>
+
+        <p style="text-align: center;">""""Be Real Because We Are Real""""</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
           <h1 class="text-center">ORDER SUMMARY</h1><br>
-          <h2 class="lead">Customer Name: {{receipt.buyer_names | title}}</h2>
+          <h3>BeReal Motors and Spareparts Company</h3>
+          <h2 class="lead" style="color: blue;">Customer Name: {{receipt.buyer_names | title}}</h2>
         </div>
         <div class="card-block">
           <div class="table-responsive">
@@ -37,16 +68,15 @@
             </table>
           </div>
         </div>
-        manager's sign                 
-        ****** **********<br>   
-        ---------------------<br>
-        Date<br>
+       <p>****** manager's sign  ********** </p>                                                                          
+        ---------------------<br><br>
+        <p>Date</p>
         -------------------
       </div>
     </div>
   </div>
   
 
-</div>
+</div> -->
 
 {% endblock %}

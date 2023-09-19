@@ -1,35 +1,32 @@
-{% extends 'spare/base.html' %} 
+{% extends 'spare/base.html' %}
 {% block content %}
-<br /><br>
+<br /><br><br>
 <div class="container">
   <h1 class="card-header text-center">ALL RECEIPTS</h1><br>
   {% for sale in sales %}
-  <div class="card" style="font-weight: bolder;">
+  <div class="card" style="font-weight: bolder; z-index: 0;">
     <div class="card-body">
+      <h3 style="text-align: center; font-weight: bolder;">Be Real Motors and spareparts company</h3>
       <h3 class="card-title" style="font-weight: bold;">Customer : {{sale.buyer_names | title}}</h3>
-      <h6 class="card-text"style="font-size: 20px;">Item : {{sale.part_purchased}}</h6>
-      <h6 class="card-text" style="font-size: 20px;">Amount Paid:  UGX{{ sale.amount_received }}</h6>
+      <h6 class="card-text" style="font-size: 20px;">Item : {{sale.part_purchased}}</h6>
+      <h6 class="card-text" style="font-size: 20px; ">Receipt_No : CW-{{sale.id}}</h6>
+      <h6 class="card-text" style="font-size: 20px;">Amount Paid: UGX{{ sale.amount_received }}</h6>
       <h6 class="card-text" style="font-size: 20px;">Quantity: {{sale.quantity }}</h6>
-      <h2 >Total Price :  UGX{{ sale.get_total }}</h2>
+      <h2 style="font-size: 20px;">Total Price : UGX{{ sale.get_total }}</h2>
       <div style="flex: 1">
-        <h6 class="card-text">Change Collected:  UGX{{ sale.get_change }}</h6>
-        <p>********************</p>
+        <h6 class="card-text" style="font-size: 20px;">Change Collected: UGX{{ sale.get_change }}</h6>
+        <p style="font-weight: bold;">********************</p>
         <p style="text-align: center;">""Be Real Because We Are Real""</p>
         <a href="{% url 'receipt_detail' sale.id %}">
-          <input
-            type="submit"
-            value="Final Receipt"
-            class="btn btn-primary"
-            type="button"
-          />
+          <input type="submit" value="Final Receipt" class="btn btn-primary" type="button"/>
         </a>
-      </div>
+      </div>         
     </div>
   </div>
-  <br />
+  <br/>
   {% endfor %}
 </div>
-{% endblock %} 
-
-
- 
+<br>
+<br>
+<br>
+{% endblock %}

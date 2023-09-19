@@ -9,7 +9,7 @@ class AddForm(ModelForm):#worker will edit/add received quantity here
     class Meta:
         model = Product
         fields =[
-            'received_quantity', 'total_quantity', 'arrival_date','country_of_origin','branch_name',
+            'received_quantity'
         ]
 
 
